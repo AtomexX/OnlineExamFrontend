@@ -1,0 +1,15 @@
+<div class="shadow-lg  p-5 ">
+    <div *ngIf="loggedin()" class="card">
+        <div class="card-body p-2 text-center">
+            <p><button class="report-btn  default-btn" [routerLink]="['/report-page']" >Report</button></p>
+            <p><button class="newExam-btn default-btn" routerLink="../user/exam" routerLinkActive="active">New Exam</button></p>
+        </div>
+    </div>
+    <div *ngIf="!loggedin()" class="card">
+        <div class="card-body p-2 text-center">
+            <p><button class="report-btn  default-btn" (click)="onClick()">Report</button></p>
+            <p><button class="newExam-btn default-btn" (click)="onClick()">New Exam</button></p>
+        </div>
+    </div>
+</div>
+
